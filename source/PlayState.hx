@@ -1876,8 +1876,6 @@ class PlayState extends MusicBeatState
 
 				switch (PlayState.storyWeek)
 				{
-					case 7:
-						FlxG.switchState(new VideoState());
 					default:
 						FlxG.switchState(new StoryMenuState());
 				}
@@ -1913,35 +1911,14 @@ class PlayState extends MusicBeatState
 				FlxG.sound.music.stop();
 				vocals.stop();
 
-				if (SONG.song.toLowerCase() == 'eggnog')
-				{
-					var blackShit:FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom,
-						-FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-					blackShit.scrollFactor.set();
-					add(blackShit);
-					camHUD.visible = false;
-					inCutscene = true;
+				prevCamFollow = camFollow;
 
-					FlxG.sound.play(Paths.sound('Lights_Shut_off'), function()
-					{
-						// no camFollow so it centers on horror tree
-						SONG = Song.loadFromJson(storyPlaylist[0].toLowerCase() + difficulty, storyPlaylist[0]);
-						LoadingState.loadAndSwitchState(new PlayState());
-					});
-				}
-				else
-				{
-					prevCamFollow = camFollow;
-
-					SONG = Song.loadFromJson(storyPlaylist[0].toLowerCase() + difficulty, storyPlaylist[0]);
-					LoadingState.loadAndSwitchState(new PlayState());
-				}
+				SONG = Song.loadFromJson(storyPlaylist[0].toLowerCase() + difficulty, storyPlaylist[0]);
+				FlxG.switchState(new PlayState());
 			}
 		}
 		else
 		{
-			trace('WENT BACK TO FREEPLAY??');
-			// unloadAssets();
 			FlxG.switchState(new FreeplayState());
 		}
 	}
