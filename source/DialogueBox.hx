@@ -30,6 +30,10 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
+	var gfportrait:FlxSprite;
+	var gf2Portrait:FlxSprite;
+	var bfportrait:FlxSprite;
+	var dadPortrait:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -78,6 +82,41 @@ class DialogueBox extends FlxSpriteGroup
 		add(portraitRight);
 		portraitRight.visible = false;
 
+		gfportrait = new FlxSprite(-20, 40);
+		gfportrait.frames = Paths.getSparrowAtlas('Portraits/gfPortrait', 'shared');
+		gfportrait.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+		gfportrait.updateHitbox();
+		gfportrait.scrollFactor.set();
+		add(gfportrait);
+		gfportrait.visible = false;	
+
+		gf2Portrait = new FlxSprite(-20, 40);
+		gf2Portrait.frames = Paths.getSparrowAtlas('Portraits/gfCheerPortrait', 'shared');
+		gf2Portrait.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+		//gf2Portrait.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+		gf2Portrait.updateHitbox();
+		gf2Portrait.scrollFactor.set();
+		add(gf2Portrait);
+		gf2Portrait.visible = false;
+
+		bfportrait = new FlxSprite(-20, 40);
+		bfportrait.frames = Paths.getSparrowAtlas('Portraits/boyfriendPortrait', 'shared');
+		bfportrait.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+		//bfportrait.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+		bfportrait.updateHitbox();
+		bfportrait.scrollFactor.set();
+		add(bfportrait);
+		bfportrait.visible = false;		
+
+		dadPortrait = new FlxSprite(-20, 40);
+		dadPortrait.frames = Paths.getSparrowAtlas('Portraits/dadPortrait', 'shared');
+		dadPortrait.animation.addByPrefix('enter', 'Portrait Enter instance', 24, false);
+		//dadPortrait.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
+		dadPortrait.updateHitbox();
+		dadPortrait.scrollFactor.set();
+		add(dadPortrait);
+		dadPortrait.visible = false;
+
 		box = new FlxSprite(-20, 45);
 		
 		var hasDialog = false;
@@ -105,6 +144,16 @@ class DialogueBox extends FlxSpriteGroup
 				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
 				face.setGraphicSize(Std.int(face.width * 6));
 				add(face);
+			default:
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 200;
+				box.height = 100;
+				box.x = -100;	 
+				box.y = 375;
+				box.flipX = true;				
 		}
 
 		this.dialogueList = dialogueList;
@@ -250,7 +299,11 @@ class DialogueBox extends FlxSpriteGroup
 		switch (curCharacter)
 		{
 			case 'dad':
+				dadPortrait.visible = false;
+				gfportrait.visible = false;
+				bfportrait.visible = false;
 				portraitRight.visible = false;
+				portraitLeft.visible = false;
 				if (!portraitLeft.visible)
 				{
 					portraitLeft.visible = true;
@@ -263,6 +316,39 @@ class DialogueBox extends FlxSpriteGroup
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
 				}
+			case 'gf':
+				dadPortrait.visible = false;
+				gfportrait.visible = false;
+				bfportrait.visible = false;
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!gfportrait.visible)
+				{
+					gfportrait.visible = true;
+					gfportrait.animation.play('enter');
+				}
+			case 'boyfriend':
+				dadPortrait.visible = false;
+				gfportrait.visible = false;
+				bfportrait.visible = false;
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!bfportrait.visible)
+				{
+					bfportrait.visible = true;
+					bfportrait.animation.play('enter');
+				}
+			case 'dearest':
+				dadPortrait.visible = false;
+				gfportrait.visible = false;
+				bfportrait.visible = false;
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!dadPortrait.visible)
+				{
+					dadPortrait.visible = true;
+					dadPortrait.animation.play('enter');
+				}				
 		}
 	}
 
