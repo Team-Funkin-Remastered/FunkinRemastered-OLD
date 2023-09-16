@@ -1,3 +1,15 @@
+# Funkin' Restored (My Take)
+
+* This project aims to restore (almost) everything that the devs inteneded to add but ran out of time to finish.
+
+* This project also restores some original stuff that got rewritten.
+
+## Funkin' Restored (my take) Credits / shoutouts
+
+- [BlitzEX (me!)](https://twitter.com/blitzexlmao) - Programmer
+- [TCRF's FNF Page](https://tcrf.net/Prerelease:Friday_Night_Funkin%27#art.2FflashFiles.2FGF_ass_sets.fla) - Where I found most things
+- OG FNF Restored Team - Dialogue Portraits.
+
 # Friday Night Funkin
 
 This is the repository for Friday Night Funkin, a game originally made for Ludum Dare 47 "Stuck In a Loop".
