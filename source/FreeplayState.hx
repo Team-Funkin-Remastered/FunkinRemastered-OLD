@@ -30,14 +30,14 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 
 	var coolColors:Array<Int> = [
-		0xff9271fd,
-		0xff9271fd,
-		0xff223344,
-		0xFF941653,
-		0xFFfc96d7,
-		0xFFa0d1ff,
-		0xffff78bf,
-		0xfff6b604
+		0xff9271fd, // Tut
+		0xff9271fd, // W1 (Dad)
+		0xFF941653, // W3 (Pico) (w2 canon)
+		0xFFfc96d7, // W4 (Mama) (w3 canon)
+		0xff223344, // W2 (Spooky) (w4 canon)
+		0xffff78bf, // W6 (Pixel Dickhead) (w5 canon)
+		0xFFa0d1ff, // W5 (Crimas) (w6 canon)
+		0xfff6b604  // W7 (RapMan) (Still the rapman)
 	];
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
@@ -77,19 +77,19 @@ class FreeplayState extends MusicBeatState
 		if (StoryMenuState.weekUnlocked[2] || isDebug)
 			addWeek(['Bopeebo', 'Fresh', 'Dadbattle'], 1, ['dad']);
 
-		if (StoryMenuState.weekUnlocked[2] || isDebug)
+		if (StoryMenuState.weekUnlocked[4] || isDebug)
 			addWeek(['Spookeez', 'South', 'Monster'], 2, ['spooky', 'spooky', 'monster']);
 
-		if (StoryMenuState.weekUnlocked[3] || isDebug)
+		if (StoryMenuState.weekUnlocked[2] || isDebug)
 			addWeek(['Pico', 'Philly', 'Blammed'], 3, ['pico']);
 
-		if (StoryMenuState.weekUnlocked[4] || isDebug)
+		if (StoryMenuState.weekUnlocked[3] || isDebug)
 			addWeek(['Satin-Panties', 'High', 'Milf'], 4, ['mom']);
 
-		if (StoryMenuState.weekUnlocked[5] || isDebug)
+		if (StoryMenuState.weekUnlocked[6] || isDebug)
 			addWeek(['Cocoa', 'Eggnog', 'Winter-Horrorland'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
 
-		if (StoryMenuState.weekUnlocked[6] || isDebug)
+		if (StoryMenuState.weekUnlocked[5] || isDebug)
 			addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
 
 		if (StoryMenuState.weekUnlocked[7] || isDebug)

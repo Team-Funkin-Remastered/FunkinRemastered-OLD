@@ -23,38 +23,39 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
+		// 
 		['Tutorial'],
 		['Bopeebo', 'Fresh', 'Dadbattle'],
-		['Spookeez', 'South', "Monster"],
 		['Pico', 'Philly', "Blammed"],
 		['Satin-Panties', "High", "Milf"],
-		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
+		['Spookeez', 'South', "Monster"],
 		['Senpai', 'Roses', 'Thorns'],
+		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Ugh', 'Guns', 'Stress']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, false, false, false, false, false, false, false];
 
 	var weekCharacters:Array<Dynamic> = [
-		['dad', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf'],
-		['tankman', 'bf', 'gf']
+		['dad', 'bf', 'gf'], //Tut
+		['dad', 'bf', 'gf'], // W1
+		['pico', 'bf', 'gf'],// W2
+		['mom', 'bf', 'gf'], //W3
+		['spooky', 'bf', 'gf'], // W4
+		['senpai', 'bf', 'gf'], //W5
+		['parents-christmas', 'bf', 'gf'], //W6
+		['tankman', 'bf', 'gf'] //W7
 	];
 
 	var weekNames:Array<String> = [
 		"",
 		"Daddy Dearest",
-		"Spooky Month",
 		"PICO",
 		"MOMMY MUST MURDER",
-		"RED SNOW",
+		"Spooky Month",
 		"hating simulator ft. moawling",
+		"RED SNOW",
 		"TANKMAN"
 	];
 
