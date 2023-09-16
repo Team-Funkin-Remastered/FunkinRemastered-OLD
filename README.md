@@ -4,6 +4,8 @@
 
 * This project also restores some original stuff that got rewritten.
 
+* ANY BUGS THAT RELATE TO CRASHING IS MAINLY BECAUSE 0.2.8'S SOURCE IS BROKEN ASF LMAO
+
 ## Funkin' Restored (my take) Credits / shoutouts
 
 - [BlitzEX (me!)](https://twitter.com/blitzexlmao) - Programmer
