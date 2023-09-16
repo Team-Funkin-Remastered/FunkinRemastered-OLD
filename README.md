@@ -1,14 +1,14 @@
-# Funkin' Restored (My Take)
+# Funkin' Remastered
 
-* This project aims to restore (almost) everything that the devs inteneded to add but ran out of time to finish.
-
-* This project also restores some original stuff that got rewritten.
+* Fridy Funkin Nigh remastr
 
 * ANY BUGS THAT RELATE TO CRASHING IS MAINLY BECAUSE 0.2.8'S SOURCE IS BROKEN ASF LMAO
 
-## Funkin' Restored (my take) Credits / shoutouts
+## Funkin' Remastered Credits / shoutouts
 
-- [BlitzEX (me!)](https://twitter.com/blitzexlmao) - Programmer
+- [BlitzEX (me!)](https://twitter.com/blitzexlmao) - Programmer!
+- GallantGlobz - New Icons!
+- raii! - Anims!
 - [TCRF's FNF Page](https://tcrf.net/Prerelease:Friday_Night_Funkin%27#art.2FflashFiles.2FGF_ass_sets.fla) - Where I found most things
 - OG FNF Restored Team - Dialogue Portraits.
 
